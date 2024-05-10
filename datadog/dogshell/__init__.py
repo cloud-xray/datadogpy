@@ -75,6 +75,7 @@ def main():
         "--api_host",
         help="Datadog site to send data, us (datadoghq.com), eu (datadoghq.eu), us3 (us3.datadoghq.com), \
               us5 (us5.datadoghq.com), ap1 (ap1.datadoghq.com), gov (ddog-gov.com), or custom url. default: us",
+        default=os.environ.get("DATADOG_API_HOST", os.environ.get("DD_API_HOST")),
         dest="api_host",
     )
 
